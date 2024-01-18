@@ -1,0 +1,9 @@
+import React from 'react'
+
+function SignupPage() {
+  return (
+    <div className='signup'><h1>SignupPage</h1></div>
+  )
+}
+
+export default SignupPage
