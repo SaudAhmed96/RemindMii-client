@@ -1,4 +1,5 @@
 import React from 'react'
+import '../../styles/partials/_global.scss'
 
 function RemindersPage() {
   return (

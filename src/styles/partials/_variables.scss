@@ -1,0 +1,30 @@
+@import './fonts';
+
+//Colors
+$Almond: blanchedalmond;
+
+$Instock-Black: #13182C;
+$Slate: #5C667E;
+$Graphite: #232940;
+$Green: #158463;
+$Instock-Indigo: #2E66E5;
+$Cloud: #BDC5D5;
+$Light-Grey: #F7F8F9;
+$Red: #C94515;
+$White: #FFFFFF;
+$InStock-Green: rgba(21, 132, 99, 0.07);
+$OutofStock-Red: rgba(201, 69, 21, 0.07);
+
+//Fonts
+$lightFont: "DM Sans Light";
+$regularFont: "DM Sans Normal";
+$boldFont: "DM Sans Bold";
+$italicFont: "DM Sans Italic";
+
+//Padding or Margin
+$mobile-pad: 1rem;
+
+//Floater Height
+$floater-mobile: 8.5rem;
+$floater-tablet: 5.5rem;
+$floater-desktop: 4.5rem;
