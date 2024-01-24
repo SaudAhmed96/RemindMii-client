@@ -1,7 +1,11 @@
-import React from "react";
+import React from 'react'
 
-function GoalsPage() {
-  return <div>GoalsPage</div>;
+const GoalsPage = () => {
+  return (
+    <div>
+      <h1>Goals Page</h1>
+    </div>
+  )
 }
 
-export default GoalsPage;
+export default GoalsPage

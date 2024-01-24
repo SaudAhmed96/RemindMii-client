@@ -4,12 +4,15 @@ import './App.css'
 import { Routes, Route, Navigate} from 'react-router-dom';
 
 import Header from './components/Header/Header'
+import Nav from './components/Nav/Nav';
 
 import GoalsPage from './pages/GoalsPage/GoalsPage'
 import LoginPage from './pages/LoginPage/LoginPage'
 import RemindersPage from './pages/RemindersPage/RemindersPage';
 import SignupPage from './pages/SignupPage/SignupPage';
 import ErrorPage from './pages/ErrorPage/ErrorPage';
+import CalendarPage from './pages/CalendarPage/CalendarPage'
+
 
 function App() {
 
@@ -44,9 +47,11 @@ function App() {
   return (
     <>
       <h1>RemindMii</h1>
+        <Nav/>
         <Routes>
           <Route path="/" element={<Navigate to="/reminders" replace={true}/>}/>
           <Route path="/reminders" element={<RemindersPage/>}/>
+          <Route path="/calendar" element={<CalendarPage />}/>
           <Route path="/goals" element={<GoalsPage/>}/>
           <Route path="/error" element={<ErrorPage/>}/>
           <Route path="*" element={<Navigate to="/error" replace={true}/>}/>

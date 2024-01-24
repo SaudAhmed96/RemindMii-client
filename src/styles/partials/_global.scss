@@ -8,7 +8,6 @@
 html{
     font-size: 8px;
     background-color:blanchedalmond;
-    font-family: $lightFont;
 }
 
 * {
@@ -20,12 +19,25 @@ html{
 
 h1{
     font-size: 4rem;
+    font-family: $boldFont;
 }
 
 h2{
     font-size: 3rem;
 }
 
-p{
+p, label, input, select, button{
     font-size: 2rem;
+    font-family: $lightFont;
+}
+
+a{
+    font-size: 2rem;
+    text-decoration: none;
+    font-family: $lightFont;
+}
+
+td, th, tr {
+    font-size: 2rem;
+    font-family: $lightFont;
 }
