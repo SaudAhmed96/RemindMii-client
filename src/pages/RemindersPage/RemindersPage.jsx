@@ -8,7 +8,7 @@ function RemindersPage() {
     <div className='reminders'>
         <h1>Reminders</h1>
 
-        < ReminderTable/>
+        <ReminderTable/>
 
         <AddReminder/>
 
