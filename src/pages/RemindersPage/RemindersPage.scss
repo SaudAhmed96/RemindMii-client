@@ -1,0 +1,11 @@
+@import '../../styles/partials/_global.scss';
+
+.reminders {
+    padding: 1rem;
+
+    @include flexBox(column);
+
+    @include tablet {
+        padding: 2rem 3rem;
+    }
+}

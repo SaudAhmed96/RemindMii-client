@@ -1,0 +1,31 @@
+@import '../../styles/partials/_global.scss';
+
+.row {
+
+    &:hover {
+        transition: 0.4s;
+        background-color: rgba($White, 0.5);
+    }
+
+    &__data {
+        @include table-data;
+        text-align: center;
+
+        &--first {
+            width: 1.7rem;
+            border-radius: 2rem;
+            background-color: white;
+            color: white;
+
+            &:hover {
+                transition: 0.6s;
+                color: black;
+            }
+        }
+
+        &--start {
+            text-align: left;
+            padding-left: 0.5rem;
+        }
+    }
+}

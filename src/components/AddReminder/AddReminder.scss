@@ -1,0 +1,46 @@
+@import '../../styles/partials/_global.scss';
+
+.addRem {
+
+    &__header {
+        // font-size: 3rem;
+        margin: 1rem 0;
+    }
+
+    &__label {
+        @include table-data;
+    }
+
+    &__input {
+        @include table-data;
+        display: block;
+        width: 100%;
+        margin: 0.25rem 0 0.5rem 0;
+        padding: 0.25rem;
+
+        &:focus {
+            outline: 1px solid $RM-Brown2;
+            // border-radius: 1px;
+        }
+    }
+
+    &__submit {
+        width: 100%;
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 1rem;
+        border: 1px solid $RM-Brown;
+        background-color: $RM-Brown2;
+
+        &:hover {
+            transition: 0.5s;
+            color: $Black;
+            background-color: rgba($RM-LightBrown, 0.7);
+        }
+
+        &:active {
+            background-color: rgba($RM-LightBrown, 0.3);
+        }
+    }
+
+}

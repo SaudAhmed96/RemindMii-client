@@ -1,0 +1,7 @@
+@import '../../styles/partials/_global.scss';
+
+.rTable {
+    &__title {
+        @include table-header;
+    }
+}

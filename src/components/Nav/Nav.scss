@@ -2,25 +2,42 @@
 
 .navbar {
 
-    @include flexBox(row);
-    justify-content: space-between;
+    // @include flexBox(row);
+
     background-color: $RM-LightBrown;
-    padding: 0.5rem 1rem;
+    padding: 1rem 1rem;
+
+    &__top {
+        @include flexBox(row);
+        justify-content: center;
+    }
+
+    &__bottom {
+        @include flexBox(column);
+    }
 
     &__logo {
-        padding: 0 0.5rem;
+        padding: 0 0.75rem;
         border: 0.1rem double $RM-Brown;
         border-radius: 10% / 50%;
         color: $White;
         background-color: $RM-Brown2;
+
+        &:hover {
+            border: 0.1rem double $Black;
+            cursor: pointer;
+        }
+
+        &:active {
+            background-color: rgba($Almond, 0.5);
+        }
     }
 
-    &__nav-wrap {
-        @include flexBox(column);
-    }
 
     &__navlist {
+        padding-top: 1rem;
         list-style-type: none;
+        text-align: center;
 
         &-item {
             text-decoration: none;
@@ -42,8 +59,22 @@
 
     &__toggle {
         @include nav-link;
+        cursor: pointer;
         color: white;
-        align-self: flex-end;
-        justify-self: flex-end;
+        align-self: center;
+        // justify-self: flex-end;
+        margin-left: 1rem;
+
+        &-icon {
+            display: block;
+            height: 2.5rem;
+            fill: white;
+        }
+
+        &-close {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
 }

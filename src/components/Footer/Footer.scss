@@ -1,1 +1,11 @@
 @import '../../styles/partials/global';
+
+.footer {
+    background-color: $RM-LightBrown;
+    padding: 2rem;
+    margin-top: 1rem;
+    text-align: center;
+    height: 10rem;
+    color: $White;
+    @include table-data;
+}

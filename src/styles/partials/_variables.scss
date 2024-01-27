@@ -1,21 +1,27 @@
 @import './fonts';
 
+
+//color palette possbiility
+// #EAC696 #C8AE7D  #765827  #65451F
+// $Almond: #EAC696;
+// $RM-Brown: #65451F;
+// $RM-LightBrown: #C8AE7D;
+// $RM-Brown2: #765827;
+
 //Colors
 $Almond: blanchedalmond;
 $RM-Brown: rgb(73, 49, 18);
 $RM-LightBrown: rgb(150, 118, 70);
 $RM-Brown2: rgb(97, 70, 31);
+$Black: #13182C;
+$White: #FFFFFF;
 
-
-$Instock-Black: #13182C;
 $Slate: #5C667E;
 $Graphite: #232940;
 $Green: #158463;
-$Instock-Indigo: #2E66E5;
 $Cloud: #BDC5D5;
 $Light-Grey: #F7F8F9;
 $Red: #C94515;
-$White: #FFFFFF;
 $InStock-Green: rgba(21, 132, 99, 0.07);
 $OutofStock-Red: rgba(201, 69, 21, 0.07);
 
