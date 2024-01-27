@@ -1,1 +1,49 @@
 @import '../../styles/partials/global';
+
+.navbar {
+
+    @include flexBox(row);
+    justify-content: space-between;
+    background-color: $RM-LightBrown;
+    padding: 0.5rem 1rem;
+
+    &__logo {
+        padding: 0 0.5rem;
+        border: 0.1rem double $RM-Brown;
+        border-radius: 10% / 50%;
+        color: $White;
+        background-color: $RM-Brown2;
+    }
+
+    &__nav-wrap {
+        @include flexBox(column);
+    }
+
+    &__navlist {
+        list-style-type: none;
+
+        &-item {
+            text-decoration: none;
+        }
+
+        &--hidden {
+            display: none;
+        }
+    }
+
+    &__navlink {
+        @include nav-link;
+        color: white;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__toggle {
+        @include nav-link;
+        color: white;
+        align-self: flex-end;
+        justify-self: flex-end;
+    }
+}

@@ -6,12 +6,11 @@
     flex-direction: $direction;
 }
 
-@mixin header-style{
-    font-size: 1.75rem;
-    line-height: 2.25rem;
-    font-family: $semiBoldFont;
+@mixin nav-link{
+    font-size: 2rem;
+    text-decoration: none;
+    font-family: $lightFont;
 
-    //header style for desktop and tablet
     @include tablet{
         font-size: 2rem;
         line-height: 2.5rem;
