@@ -3,7 +3,7 @@ import './ReminderRow.scss'
 
 const ReminderRow = ({ remID, task, category, finish_date, hours, status, user_id }) => {
 
-  const realDate = new Date()
+  const realDate = new Date(finish_date)
     .toLocaleDateString('en-us', { year: "numeric", month: "short", day: "numeric" })
 
   const setComplete = () => {

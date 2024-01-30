@@ -7,6 +7,38 @@
         margin: 1rem 0;
     }
 
+    &__record {
+
+        margin-bottom: 1rem;
+
+        &-button {
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 1rem;
+            border: 1px solid $RM-Brown;
+            background-color: $RM-Brown2;
+
+            &:hover {
+                transition: 0.5s;
+                color: $Black;
+                background-color: rgba($RM-LightBrown, 0.7);
+            }
+
+            &:active {
+                background-color: rgba($RM-LightBrown, 0.3);
+            }
+        }
+
+        &-transcript {
+            font-family: $lightFont;
+            margin: 0.5rem 0;
+            background-color: $White;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+        }
+
+    }
+
     &__label {
         @include table-data;
     }
@@ -20,7 +52,6 @@
 
         &:focus {
             outline: 1px solid $RM-Brown2;
-            // border-radius: 1px;
         }
     }
 
@@ -28,6 +59,7 @@
         width: 100%;
         color: white;
         padding: 0.5rem 1rem;
+        margin-top: 1rem;
         border-radius: 1rem;
         border: 1px solid $RM-Brown;
         background-color: $RM-Brown2;
