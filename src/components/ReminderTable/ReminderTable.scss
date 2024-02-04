@@ -1,7 +1,19 @@
 @import '../../styles/partials/_global.scss';
 
 .rTable {
+
+    border-spacing: 0.5rem;
+
     &__title {
         @include table-header;
+
+        &--time {
+            min-width: 4.75rem;
+        }
+    }
+
+    &__sort {
+        height: 1.5rem;
+        margin-bottom: -0.25rem;
     }
 }

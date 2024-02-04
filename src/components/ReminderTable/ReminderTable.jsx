@@ -1,38 +1,36 @@
-import React, { useEffect, useState } from 'react'
-import axios from 'axios'
 import './ReminderTable.scss'
+import sortIcon from '../../assets/images/icons/sort-24px.svg'
 
 import ReminderRow from '../ReminderRow/ReminderRow';
 // import dotenv from 'dotenv'
 
-const ReminderTable = () => {
-  const [reminderData, setReminderData] = useState([]);
-  const baseURL = 'http://localhost:8080';
+const ReminderTable = ({ reminderData }) => {
 
-  useEffect(() => {
-    getReminders()
-  }, [])
+  console.log(reminderData)
 
-  const getReminders = () => {
-    axios.get(`${baseURL}/reminders`).then((data) => {
-      console.log(data)
-      setReminderData(data.data)
-    })
-  }
   return (
 
     <table className='rTable'>
       <thead className='rTable__headers'>
         <tr>
           <th className='rTable__title'></th>
-          <th className='rTable__title'>Task</th>
-          <th className='rTable__title'>Category</th>
-          <th className='rTable__title'>Date</th>
-          <th className='rTable__title'>Time</th>
+          <th className='rTable__title'>Task
+            <img src={sortIcon} className='rTable__sort' />
+          </th>
+          <th className='rTable__title'>Category
+            <img src={sortIcon} className='rTable__sort' />
+          </th>
+          <th className='rTable__title'>Date
+            <img src={sortIcon} className='rTable__sort' />
+          </th>
+          <th className='rTable__title rTable__title--time'>Time
+            <img src={sortIcon} className='rTable__sort' />
+          </th>
+          <th className='rTable__title'></th>
         </tr>
       </thead>
       <tbody className='rTable__body'>
-        {reminderData.map((row) => {
+        {reminderData?.map((row) => {
           return <ReminderRow
             key={row.id}
             remID={row.id}

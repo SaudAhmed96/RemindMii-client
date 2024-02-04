@@ -1,0 +1,35 @@
+@import '../../styles/partials/_global.scss';
+
+.journal {
+    padding: 1rem;
+
+    background-image: linear-gradient(rgba($Almond, 0.5), rgba($Almond, 0.75)),
+        url('../../assets/images/rough-paper.avif');
+
+    @include flexBox(column);
+
+    @include tablet {
+        padding: 2rem 3rem;
+    }
+
+    &__add {
+        width: 100%;
+        color: white;
+        padding: 0.5rem 1rem;
+        margin: 1rem 0;
+        border-radius: 1rem;
+        border: 1px solid $RM-Brown;
+        background-color: $RM-Brown2;
+        cursor: pointer;
+
+        &:hover {
+            transition: 0.5s;
+            color: $Black;
+            background-color: rgba($RM-LightBrown, 0.7);
+        }
+
+        &:active {
+            background-color: rgba($RM-LightBrown, 0.3);
+        }
+    }
+}

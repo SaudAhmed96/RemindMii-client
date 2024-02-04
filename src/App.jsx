@@ -13,6 +13,9 @@ import RemindersPage from './pages/RemindersPage/RemindersPage';
 import SignupPage from './pages/SignupPage/SignupPage';
 import ErrorPage from './pages/ErrorPage/ErrorPage';
 import CalendarPage from './pages/CalendarPage/CalendarPage'
+import JournalPage from './pages/JournalPage/JournalPage';
+import { JournalEntry } from './components/JournalEntry/JournalEntry';
+import AddJournal from './components/AddJournal/AddJournal';
 
 
 
@@ -54,6 +57,9 @@ function App() {
         <Route path="/reminders" element={<RemindersPage />} />
         <Route path="/calendar" element={<CalendarPage />} />
         <Route path="/goals" element={<GoalsPage />} />
+        <Route path="/journal" element={<JournalPage />} />
+        <Route path="/journal/entry/:entryID" element={<JournalEntry />} />
+        <Route path="/journal/addentry" element={<AddJournal />} />
         <Route path="/error" element={<ErrorPage />} />
         <Route path="*" element={<Navigate to="/error" replace={true} />} />
       </Routes>

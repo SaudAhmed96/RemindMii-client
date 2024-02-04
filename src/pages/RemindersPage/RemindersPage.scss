@@ -3,9 +3,77 @@
 .reminders {
     padding: 1rem;
 
+    background-image: linear-gradient(rgba($Almond, 0.5), rgba($Almond, 0.75)),
+        url('../../assets/images/rough-paper.avif');
+
     @include flexBox(column);
 
     @include tablet {
         padding: 2rem 3rem;
     }
+
+    &__top {
+        @include flexBox(column);
+        justify-content: space-between;
+    }
+
+    &__filters {
+        @include flexBox(row);
+        justify-content: center;
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    &__statfilter {
+        @include flexBox(row);
+        justify-content: center;
+        @include nav-link;
+        font-size: 1.25rem;
+        background-color: rgba($RM-Brown, 0.75);
+        border-radius: 0.5rem;
+        border: 1px $RM-LightBrown solid;
+        color: $White;
+
+        padding: 0.375rem;
+        margin-right: 0.75rem;
+    }
+
+    &__catfilter {
+        @include flexBox(row);
+        @include nav-link;
+        font-size: 1.25rem;
+        background-color: rgba($RM-Brown, 0.75);
+        border: 1px $RM-LightBrown solid;
+        color: $White;
+
+        padding: 0.375rem;
+        border-radius: 0.5rem;
+
+    }
+
+    &__filter {
+        background: radial-gradient(rgba($RM-Brown, 0.75), rgba($RM-Brown, 0.35));
+        text-align: center;
+        border-radius: 0.25rem;
+        padding: 0.25rem;
+        min-width: 4rem;
+        margin-right: 0.375rem;
+
+        &:hover {
+            transition: 0.5s;
+            background: radial-gradient(rgba($RM-Brown, 1), rgba($RM-Brown, 0.75));
+            cursor: pointer;
+        }
+
+        &:active {
+            background: radial-gradient(rgba($RM-Brown, 0.25), rgba($RM-Brown, 0.75));
+        }
+
+
+        &--last {
+            margin-right: 0;
+        }
+    }
+
+
 }

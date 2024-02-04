@@ -1,0 +1,92 @@
+@import '../../styles/partials/_global.scss';
+
+
+.addjournal {
+    padding: 1rem;
+
+    background-image: linear-gradient(rgba($Almond, 0.5), rgba($Almond, 0.75)),
+        url('../../assets/images/rough-paper.avif');
+
+    @include flexBox(column);
+
+    @include tablet {
+        padding: 2rem 3rem;
+    }
+}
+
+.form {
+    &__label {
+        @include table-data;
+    }
+
+    &__input {
+        @include table-data;
+        display: block;
+        width: 100%;
+        margin: 0.25rem 0 0.5rem 0;
+        padding: 0.25rem;
+
+        &:focus {
+            outline: 1px solid $RM-Brown2;
+        }
+    }
+
+    &__textarea {
+        resize: none;
+
+        @include table-data;
+        display: block;
+        width: 100%;
+        margin: 0.25rem 0 0.5rem 0;
+        padding: 0.25rem;
+
+        &:focus {
+            outline: 1px solid $RM-Brown2;
+        }
+    }
+
+    &__submit {
+        width: 100%;
+        color: white;
+        padding: 0.5rem 1rem;
+        margin-top: 1rem;
+        border-radius: 1rem;
+        border: 1px solid $RM-Brown;
+        background-color: $RM-Brown2;
+
+        &:hover {
+            transition: 0.5s;
+            color: $Black;
+            background-color: rgba($RM-LightBrown, 0.7);
+        }
+
+        &:active {
+            background-color: rgba($RM-LightBrown, 0.3);
+        }
+
+
+    }
+
+    &__record {
+        @include nav-link;
+        margin-bottom: 1rem;
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 1rem;
+        border: 1px solid $RM-Brown;
+        background-color: $RM-Brown2;
+        text-align: center;
+        width: 15rem;
+
+        &:hover {
+            transition: 0.5s;
+            color: $Black;
+            background-color: rgba($RM-LightBrown, 0.7);
+        }
+
+        &:active {
+            background-color: rgba($RM-LightBrown, 0.3);
+        }
+    }
+
+}

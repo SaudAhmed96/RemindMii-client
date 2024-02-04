@@ -1,0 +1,25 @@
+@import '../../styles/partials/_global.scss';
+
+.journalTable {
+
+    &__columns {
+        @include flexBox(row);
+        justify-content: space-between
+    }
+
+    &__col {
+        @include table-header;
+        font-family: $boldFont;
+        margin: 1rem;
+        text-align: center;
+
+        &--entry {
+            width: 9rem;
+            margin: 1rem 0;
+        }
+
+        &--title {
+            flex-grow: 1;
+        }
+    }
+}

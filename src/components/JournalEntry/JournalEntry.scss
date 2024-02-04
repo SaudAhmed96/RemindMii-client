@@ -1,0 +1,36 @@
+@import '../../styles/partials/_global.scss';
+
+.journalEntry {
+    padding: 1rem;
+
+    background-image: linear-gradient(rgba($Almond, 0.5), rgba($Almond, 0.75)),
+        url('../../assets/images/rough-paper.avif');
+
+    @include flexBox(column);
+
+    @include tablet {
+        padding: 2rem 3rem;
+    }
+
+    &__back {
+        cursor: pointer;
+        @include table-data
+    }
+
+    &__body {
+        @include table-data
+    }
+
+    &__date {
+        @include table-data
+    }
+
+    &__top {
+        @include flexBox(row);
+        justify-content: space-between;
+
+        &:hover {
+            color: $RM-Brown2;
+        }
+    }
+}

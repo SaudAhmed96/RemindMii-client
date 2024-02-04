@@ -2,14 +2,8 @@ import React, { useEffect, useRef, useState } from 'react'
 import './AddReminder.scss'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
-// import { AudioRecorder } from 'react-audio-voice-recorder'
 
-// import 'regenerator-runtime/runtime'
-// import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition'
-// const SpeechRecognition = window.webkitSpeechRecognition || window.SpeechRecognition
-// const SpeechGrammarList = window.SpeechGrammarList || window.webkitSpeechGrammarList
-
-const AddReminder = () => {
+const AddReminder = ({ setUpdateTable, updateTable }) => {
 
   const baseURL = 'http://localhost:8080'
   const navigate = useNavigate();
@@ -74,6 +68,7 @@ const AddReminder = () => {
         sentenceString.push(longTranscript[i][0].transcript)
       }
       setCleanLongTranscript(sentenceString.join(' '))
+      setTask(sentenceString.join(' '))
     }
   }
 
@@ -107,7 +102,14 @@ const AddReminder = () => {
         )
         .then((res) => {
           console.log(res)
-          navigate('/reminders')
+          setUpdateTable(!updateTable)
+          setTask("")
+          setCategory("")
+          setFinishDate("")
+          setTime("")
+          setTranscript("")
+          setRecordingComplete(false)
+
         })
         .catch((error) => {
           console.log(error)

@@ -1,4 +1,8 @@
-
+@mixin mobile-2 {
+    @media (min-width: 420px) {
+        @content;
+    }
+}
 
 @mixin tablet {
     @media (min-width: 768px) {
@@ -8,6 +12,6 @@
 
 @mixin desktop {
     @media (min-width: 1280px) {
-        @content;    
+        @content;
     }
 }

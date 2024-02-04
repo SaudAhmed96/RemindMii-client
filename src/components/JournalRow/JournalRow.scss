@@ -1,0 +1,33 @@
+@import '../../styles/partials/_global.scss';
+
+.journalRow {
+    @include flexBox(row);
+    justify-content: space-between;
+    margin: 0.5rem 0;
+
+    background-color: rgba($RM-LightBrown, 0.2);
+    border-radius: 0.5rem;
+    cursor: pointer;
+
+    &:hover {
+        transition: 0.4s;
+        background-color: rgba($White, 0.5);
+    }
+
+    &__row {
+        @include table-data;
+        margin: 0.5rem 0;
+        text-align: center;
+
+        &--entry {
+            width: 9rem;
+        }
+
+        &--title {
+            flex-grow: 1;
+            text-align: start;
+            margin: 0.5rem;
+        }
+    }
+
+}

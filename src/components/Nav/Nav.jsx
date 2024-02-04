@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { NavLink, Navigate, useNavigate } from 'react-router-dom'
 import './Nav.scss'
-import navIcon from '../../assets/images/menu-burger.svg'
+import navIcon from '../../assets/images/icons/menu-burger.svg'
 
 const Nav = () => {
   const [navToggle, setNavToggle] = useState(false);
@@ -30,6 +30,9 @@ const Nav = () => {
         <ul className={navToggle ? `navbar__navlist` : "navbar__navlist navbar__navlist--hidden"}>
           <li className='navbar__navlist-item'>
             <NavLink to={'/reminders'} className='navbar__navlink'>Reminders</NavLink>
+          </li>
+          <li className='navbar__navlist-item'>
+            <NavLink to={'/journal'} className='navbar__navlink'>Journal</NavLink>
           </li>
           <li className='navbar__navlist-item'>
             <NavLink to={'/calendar'} className='navbar__navlink'>Calendar</NavLink>
